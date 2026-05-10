@@ -1,13 +1,255 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+
+
+body{
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #1e293b, #0f172a);
+    min-height: 100vh;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+
+
+.modern-task{
+    background: white;
+    border-radius: 16px;
+    padding: 20px;
+    margin-bottom: 20px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+
+    transition: 0.3s;
+}
+
+.modern-task:hover{
+    transform: translateY(-3px);
+}
+
+.modern-task.done{
+    opacity: 0.7;
+}
+
+.task-content h3{
+    margin: 0 0 10px 0;
+    color: #111827;
+}
+
+.task-content p{
+    margin: 0;
+    color: #6b7280;
+}
+
+
+
+.task-actions{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+
+
+.status{
+    padding: 6px 12px;
+    border-radius: 20px;
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.status-done{
+    background: #10b981;
+}
+
+.status-todo{
+    background: #ef4444;
+}
+
+
+
+.btn{
+    border: none;
+    padding: 10px 16px;
+    border-radius: 10px;
+    cursor: pointer;
+    color: white;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.btn:hover{
+    transform: scale(1.05);
+}
+
+.btn-status{
+    background: #3b82f6;
+}
+
+.btn-delete{
+    background: #ef4444;
+}
+
+.btn-add{
+    background: #8b5cf6;
+    width: 100%;
+    margin-top: 15px;
+}
+
+.add-page{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.add-card{
+    background: white;
+    padding: 40px;
+    border-radius: 20px;
+    width: 100%;
+    max-width: 500px;
+
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
+.add-card h1{
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+
+
+.modern-input,
+.modern-textarea{
+    width: 100%;
+    padding: 14px;
+    margin-top: 15px;
+
+    border-radius: 12px;
+    border: 1px solid #d1d5db;
+
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+.modern-textarea{
+    min-height: 140px;
+    resize: vertical;
+}
+
+
+
+.back-link{
+    display: inline-block;
+    margin-bottom: 20px;
+    color: #6366f1;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.todo-container{
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 30px;
+
+    background: rgba(255,255,255,0.05);
+
+    border-radius: 24px;
+
+    backdrop-filter: blur(8px);
+
+    box-shadow: 0 8px 30px rgba(0,0,0,0.25);
+}
+
+
+.todo-page{
+    min-height: 100vh;
+    padding: 50px 20px;
+}
+
+
+
+.todo-container{
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 35px;
+
+    background: rgba(255,255,255,0.08);
+
+    border-radius: 24px;
+
+    backdrop-filter: blur(10px);
+
+    box-shadow: 0 8px 30px rgba(0,0,0,0.25);
+}
+
+
+.todo-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin-bottom: 35px;
+}
+
+.todo-header h1{
+    color: white;
+    margin: 0;
+
+    font-size: 42px;
+    font-weight: bold;
+}
+
+
+
+.add-task-link{
+    background: linear-gradient(135deg, #8b5cf6, #6366f1);
+
+    color: white;
+    text-decoration: none;
+
+    padding: 14px 24px;
+
+    border-radius: 14px;
+
+    font-weight: bold;
+    font-size: 16px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    transition: all 0.3s ease;
+
+    box-shadow: 0 6px 20px rgba(99,102,241,0.4);
+}
+
+.add-task-link:hover{
+    transform: translateY(-3px);
+
+    background: linear-gradient(135deg, #7c3aed, #4f46e5);
+
+    box-shadow: 0 10px 24px rgba(99,102,241,0.6);
+}
+
+
+
+.empty-tasks{
+    background: white;
+
+    padding: 40px;
+
+    border-radius: 20px;
+
+    text-align: center;
+
+    font-size: 20px;
+
+    color: #6b7280;
+
+    box-shadow: 0 4px 15px rgba(0,0,0,0.15);
 }
